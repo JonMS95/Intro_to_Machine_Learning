@@ -1,6 +1,8 @@
 import pandas as pd
 from constants import *
 from sklearn.tree import DecisionTreeRegressor
+
+# Apart from the ones above, some functions have to be imported additionally in order to calculate the mean absolute error (MAE) later.
 from sklearn.metrics import mean_absolute_error
 
 melbourne_data = pd.read_csv(PATH_MELBOURNE_CSV)
