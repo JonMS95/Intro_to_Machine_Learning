@@ -24,4 +24,4 @@ forest_model.fit(train_X, train_y)
 
 melb_preds = forest_model.predict(val_X)
 RFR_MAE = mean_absolute_error(melb_preds, val_y)
-print("Random forest model MAE: \t" + str(RFR_MAE))
+print("Random forest model MAE: {:,.2f}".format(RFR_MAE))
