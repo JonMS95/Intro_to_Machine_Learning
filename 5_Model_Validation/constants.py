@@ -9,3 +9,4 @@ TEXT_FIVE_TARGET_PRICES = "The actual prices for the first five provided houses 
 TEXT_FIVE_PRED_PRICES   = "The predicted prices for the first five provided houses are:"
 
 DTR_RANDOM_STATE    = 1
+SPLIT_RANDOM_STATE  = 0
