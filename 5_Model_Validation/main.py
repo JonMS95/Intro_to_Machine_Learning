@@ -38,3 +38,6 @@ melbourne_predict_prices = melbourne_model.predict(X)
 melbourne_MAE = mean_absolute_error(y, melbourne_predict_prices)
 
 print(melbourne_MAE)
+
+# Until this point, it can be noticed that mean absolute error is unsurprisingly low. It's something expectable, as the data that was used first to train the model
+# is the same that's being used later to test it, which is quite unfair, to be honest.
