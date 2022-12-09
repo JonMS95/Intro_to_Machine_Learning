@@ -25,3 +25,7 @@ forest_model.fit(train_X, train_y)
 melb_preds = forest_model.predict(val_X)
 RFR_MAE = mean_absolute_error(melb_preds, val_y)
 print("Random forest model MAE: {:,.2f}".format(RFR_MAE))
+
+# Same as in the previous exercise, once it's known which the error is for the validation data, the whole dataset may be used to train the model again.
+forest_final_model = RandomForestRegressor(random_state = RFR_RANDOM_STATE)
+forest_final_model.fit(X, y)
