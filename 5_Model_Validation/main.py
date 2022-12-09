@@ -39,6 +39,8 @@ melbourne_model.fit(X, y)
 melbourne_predict_prices = melbourne_model.predict(X)
 melbourne_MAE = mean_absolute_error(y, melbourne_predict_prices)
 
+print(TEXT_SEPARATOR)
+print(TEXT_FIRST_MAE, end='')
 print(melbourne_MAE)
 
 # Until this point, it can be noticed that mean absolute error is unsurprisingly low. It's something expectable, as the data that was used first to train the model
@@ -52,5 +54,8 @@ melbourne_fair_model.fit(train_X, train_y)
 
 # Let's calculate and display the MAE now. To do so, generate the predictions first, then get the MAE. Only validation data is used in this process.
 melbourne_fair_prediction = melbourne_fair_model.predict(val_X)
-melbourne_fair_MAE = mean_absolute_error(y, melbourne_fair_prediction)
+melbourne_fair_MAE = mean_absolute_error(val_y, melbourne_fair_prediction)
+
+print('\n' + TEXT_SEPARATOR)
+print(TEXT_FAIR_MAE, end='')
 print(melbourne_fair_MAE)
