@@ -42,6 +42,8 @@ train_X, val_X, train_y, val_y = train_test_split(X, y, random_state = SPLIT_RAN
 
 calculated_MAE = {}
 
+# For each number of leaves, train the model and test it against the validation data set. Calculate and store the MAE for each model. In the end, get the best
+# performing number of leaves.
 for leaves in MAX_LEAF_NODES:
     MAE = int(get_MAE(leaves, DTR_RANDOM_STATE, train_X, val_X, train_y, val_y))
     if MAE not in calculated_MAE.keys():
